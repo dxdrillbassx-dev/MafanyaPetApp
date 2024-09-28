@@ -1,3 +1,4 @@
+![logo.jpg](logo.jpg)
 # MafanyaPetApp (Ru)
 
 Анимешка на рабочий стол которая украсит его
