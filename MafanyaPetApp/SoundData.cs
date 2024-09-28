@@ -1,33 +1,37 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 namespace MafanyaPetApp
 {
     public static class SoundData
     {
-        public static readonly string[] PushSounds =
+        // Динамический путь к папке sound
+        public static string BaseSoundPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "sound");
+
+        public static string[] PushSounds =
         {
-            "C:\\Users\\DXDRILLBASSX\\source\\repos\\MafanyaPetApp\\MafanyaPetApp\\sound\\push_sound1.wav",
-            "C:\\Users\\DXDRILLBASSX\\source\\repos\\MafanyaPetApp\\MafanyaPetApp\\sound\\push_sound2.wav",
-            "C:\\Users\\DXDRILLBASSX\\source\\repos\\MafanyaPetApp\\MafanyaPetApp\\sound\\push_sound3.wav",
-            "C:\\Users\\DXDRILLBASSX\\source\\repos\\MafanyaPetApp\\MafanyaPetApp\\sound\\push_sound4.wav",
-            "C:\\Users\\DXDRILLBASSX\\source\\repos\\MafanyaPetApp\\MafanyaPetApp\\sound\\push_sound5.wav",
-            "C:\\Users\\DXDRILLBASSX\\source\\repos\\MafanyaPetApp\\MafanyaPetApp\\sound\\push_sound6.wav"
+            Path.Combine(BaseSoundPath, "push_sound1.wav"),
+            Path.Combine(BaseSoundPath, "push_sound2.wav"),
+            Path.Combine(BaseSoundPath, "push_sound3.wav"),
+            Path.Combine(BaseSoundPath, "push_sound4.wav"),
+            Path.Combine(BaseSoundPath, "push_sound5.wav"),
+            Path.Combine(BaseSoundPath, "push_sound6.wav")
         };
 
-        public static readonly string[] Trousers2Sounds =
+        public static string[] Trousers2Sounds =
         {
-            "C:\\Users\\DXDRILLBASSX\\source\\repos\\MafanyaPetApp\\MafanyaPetApp\\sound\\trousers2_sound1.wav",
-            "C:\\Users\\DXDRILLBASSX\\source\\repos\\MafanyaPetApp\\MafanyaPetApp\\sound\\trousers2_sound2.wav",
-            "C:\\Users\\DXDRILLBASSX\\source\\repos\\MafanyaPetApp\\MafanyaPetApp\\sound\\trousers2_sound3.wav",
-            "C:\\Users\\DXDRILLBASSX\\source\\repos\\MafanyaPetApp\\MafanyaPetApp\\sound\\trousers2_sound4.wav",
+            Path.Combine(BaseSoundPath, "trousers2_sound1.wav"),
+            Path.Combine(BaseSoundPath, "trousers2_sound2.wav"),
+            Path.Combine(BaseSoundPath, "trousers2_sound3.wav"),
+            Path.Combine(BaseSoundPath, "trousers2_sound4.wav")
         };
 
-        public static readonly string[] TrousersStartSounds =
+        public static string[] TrousersStartSounds =
         {
-            "C:\\Users\\DXDRILLBASSX\\source\\repos\\MafanyaPetApp\\MafanyaPetApp\\sound\\trousers_start_sound1.wav",
-            "C:\\Users\\DXDRILLBASSX\\source\\repos\\MafanyaPetApp\\MafanyaPetApp\\sound\\trousers_start_sound2.wav",
-            "C:\\Users\\DXDRILLBASSX\\source\\repos\\MafanyaPetApp\\MafanyaPetApp\\sound\\trousers_start_sound3.wav",
-            "C:\\Users\\DXDRILLBASSX\\source\\repos\\MafanyaPetApp\\MafanyaPetApp\\sound\\trousers_start_sound4.wav",
+            Path.Combine(BaseSoundPath, "trousers_start_sound1.wav"),
+            Path.Combine(BaseSoundPath, "trousers_start_sound2.wav"),
+            Path.Combine(BaseSoundPath, "trousers_start_sound3.wav"),
+            Path.Combine(BaseSoundPath, "trousers_start_sound4.wav")
         };
     }
 }

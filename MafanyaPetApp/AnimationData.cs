@@ -1,31 +1,34 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace MafanyaPetApp
 {
     public static class AnimationData
     {
-        public static string BaseImagePath = "C:\\Users\\DXDRILLBASSX\\source\\repos\\MafanyaPetApp\\MafanyaPetApp\\img\\";
+        // Динамический путь к папке img
+        public static string BaseImagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "img");
 
         public static Image[] LoadFrames(string weapon, int frameCount)
         {
             Image[] frames = new Image[frameCount];
             for (int i = 0; i < frameCount; i++)
             {
-                string filePath = $"{BaseImagePath}{weapon}\\{i + 1}.png";
+                string filePath = Path.Combine(BaseImagePath, weapon, $"{i + 1}.png");
                 try
                 {
                     frames[i] = Image.FromFile(filePath);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Ошибка при загрузке изображения: {ex.Message}");
+                    MessageBox.Show($"Ошибка при загрузке изображения: {ex.Message} \nПуть: {filePath}");
                 }
             }
             return frames;
         }
 
+        // Загрузка анимаций
         public static Image[] StickFrames = LoadFrames("stick", 8);
         public static Image[] GunFrames = LoadFrames("gun", 8);
         public static Image[] RifleFrames = LoadFrames("rifle", 8);
@@ -40,3 +43,5 @@ namespace MafanyaPetApp
         public static Image[] RollFrames = LoadFrames("roll", 6);
     }
 }
+
+
