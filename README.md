@@ -1,5 +1,6 @@
-![logo.jpg](logo.jpg)
 # MafanyaPetApp (Ru)
+
+![logo.jpg](logo.jpg)
 
 Анимешка на рабочий стол которая украсит его
 
@@ -22,6 +23,8 @@ P.S. пункт "Трусики" 18+
 ~~~
 
 # MafanyaPetApp (Eng)
+
+![logo.jpg](logo.jpg)
 
 An anime for your desktop that will decorate it
 
